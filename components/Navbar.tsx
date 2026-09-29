@@ -42,7 +42,7 @@ export default function Navbar() {
           className="mr-auto flex shrink-0 items-center gap-2 rounded-lg py-0.5 transition-transform duration-200 hover:scale-[1.02] sm:gap-3"
         >
           <LogoCircle size={36} />
-          <span className="font-heading text-[13px] font-bold uppercase tracking-tight text-slate-900 sm:text-base lg:text-lg">
+          <span className="font-heading text-[15px] font-bold uppercase tracking-tight text-slate-900 sm:text-base lg:text-lg">
             DR SWAMI KARRI
           </span>
         </a>
