@@ -10,6 +10,7 @@
 :root {
   --background: #ffffff;
   --foreground: #1e1b2e;
+  --navbar-height: 80px;
 }
 
 @theme {
@@ -39,6 +40,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -47,6 +50,8 @@ body {
   font-family: var(--font-body), "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 ::selection {

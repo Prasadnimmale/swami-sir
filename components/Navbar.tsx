@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
+import LogoCircle from "./LogoCircle";
 
 const links = [
   { href: "#top", label: "Home" },
@@ -30,12 +30,24 @@ export default function Navbar() {
           ? "border-b border-violet-100 bg-white/85 backdrop-blur-md"
           : "bg-transparent"
       }`}
+      style={{ overflowX: "hidden", boxSizing: "border-box" }}
     >
-      <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#top" className="flex shrink-0 items-center gap-2.5 rounded-lg py-0.5 transition-transform duration-200 hover:scale-[1.02] sm:gap-3 sm:px-1">
-          <Logo size={44} />
+      <nav
+        className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        style={{ boxSizing: "border-box" }}
+      >
+        {/* Logo + Name */}
+        <a
+          href="#top"
+          className="mr-auto flex shrink-0 items-center gap-2 rounded-lg py-0.5 transition-transform duration-200 hover:scale-[1.02] sm:gap-3"
+        >
+          <LogoCircle size={36} />
+          <span className="font-heading text-[13px] font-bold uppercase tracking-tight text-slate-900 sm:text-base lg:text-lg">
+            DR SWAMI KARRI
+          </span>
         </a>
 
+        {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 lg:flex">
           {links.map((link) => (
             <a
@@ -55,62 +67,61 @@ export default function Navbar() {
           </a>
         </div>
 
+        {/* Mobile Hamburger */}
         <button
           type="button"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-violet-200 bg-white/80 text-slate-900 transition-colors hover:border-violet-400 hover:text-violet-700 lg:hidden"
+          className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-200 bg-white shadow-sm transition-colors hover:border-violet-400 lg:hidden"
+          style={{ boxSizing: "border-box" }}
         >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            {open ? (
-              <>
-                <line x1="6" y1="6" x2="18" y2="18" />
-                <line x1="18" y1="6" x2="6" y2="18" />
-              </>
-            ) : (
-              <>
-                <line x1="5" y1="7" x2="19" y2="7" />
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <line x1="5" y1="17" x2="19" y2="17" />
-              </>
-            )}
-          </svg>
+          <span
+            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
+              open ? "rotate-45" : "-translate-y-[7px]"
+            }`}
+          />
+          <span
+            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
+              open ? "-rotate-45" : "translate-y-[7px]"
+            }`}
+          />
         </button>
       </nav>
 
-      {open ? (
-        <div className="border-t border-violet-100 bg-white/95 px-4 pb-6 pt-2 lg:hidden">
-          <div className="flex flex-col">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="border-b border-violet-100 py-3 font-body text-[15px] font-medium text-slate-600 transition-colors hover:text-violet-800"
-              >
-                {link.label}
-              </a>
-            ))}
+      {/* Mobile Menu */}
+      <div
+        className={`overflow-hidden bg-white/95 backdrop-blur-md transition-all duration-300 lg:hidden ${
+          open
+            ? "max-h-[600px] border-t border-violet-100 opacity-100"
+            : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col px-4 pb-6 pt-2">
+          {links.map((link) => (
             <a
-              href="#contact"
+              key={link.href}
+              href={link.href}
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full border border-violet-700/40 bg-violet-700/10 px-5 py-2.5 text-center font-body text-[15px] font-medium text-violet-800"
+              className="border-b border-violet-100 py-3 font-body text-[15px] font-medium text-slate-600 transition-colors hover:text-violet-800"
             >
-              Let&apos;s Talk
+              {link.label}
             </a>
-          </div>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="mt-4 rounded-full border border-violet-700/40 bg-violet-700/10 px-5 py-2.5 text-center font-body text-[15px] font-medium text-violet-800"
+          >
+            Let&apos;s Talk
+          </a>
         </div>
-      ) : null}
+      </div>
     </header>
   );
 }
