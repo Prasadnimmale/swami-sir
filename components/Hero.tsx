@@ -14,9 +14,9 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-white pb-16 pt-[94px] sm:pt-[96px] lg:pb-24"
+      className="relative overflow-hidden bg-white pb-16 pt-[95px] sm:pt-[96px] lg:pb-24"
     >
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-violet-500/10 blur-[130px]" />
+      <div className="pointer-events-none absolute -top-8 left-1/2 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-violet-500/10 blur-[130px]" />
       <div className="pointer-events-none absolute -right-40 top-1/3 h-[380px] w-[380px] rounded-full bg-violet-500/10 blur-[120px]" />
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-8">

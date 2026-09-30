@@ -25,13 +25,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-violet-200/60 bg-white/90 shadow-[0_2px_12px_rgba(124,58,237,0.08)] backdrop-blur-md transition-colors duration-300 ${
-        scrolled ? "border-violet-100 bg-white/85" : ""
+      className={`fixed inset-x-0 top-0 z-50 border-b border-violet-100 bg-white shadow-[0_2px_12px_rgba(124,58,237,0.08)] transition-colors duration-300 ${
+        scrolled ? "border-violet-200" : ""
       }`}
       style={{ overflowX: "hidden", boxSizing: "border-box" }}
     >
       <nav
-        className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        className="mx-auto flex h-[72px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
         style={{ boxSizing: "border-box" }}
       >
         {/* Logo + Name */}
@@ -41,7 +41,7 @@ export default function Navbar() {
         >
           <LogoCircle size={30} />
           <span
-            className="font-script whitespace-nowrap text-[22px] text-slate-950 sm:text-[26px] lg:text-[30px]"
+            className="font-script whitespace-nowrap text-[22px] text-slate-900 sm:text-[26px] lg:text-[30px]"
             style={{ fontFamily: "var(--font-script), cursive" }}
           >
             Dr. Swami Karri
@@ -54,7 +54,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="group/nav relative font-body text-base font-medium text-slate-600 transition-colors hover:text-violet-800"
+              className="group/nav relative font-body text-base font-medium text-slate-600 transition-colors hover:text-violet-600"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-violet-600 transition-all duration-300 group-hover/nav:w-full" />
@@ -62,7 +62,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="rounded-full border border-violet-700/50 bg-gradient-to-r from-violet-700 to-violet-800 px-6 py-2.5 font-body text-base font-medium text-white shadow-[0_2px_12px_rgba(124,58,237,0.3)] transition-all duration-300 hover:shadow-[0_4px_20px_rgba(124,58,237,0.45)] hover:brightness-110"
+            className="rounded-full border border-violet-600/50 bg-violet-600 px-6 py-2.5 font-body text-base font-medium text-white shadow-[0_2px_12px_rgba(124,58,237,0.3)] transition-all duration-300 hover:bg-violet-500 hover:shadow-[0_4px_20px_rgba(124,58,237,0.45)]"
           >
             Let&apos;s Talk
           </a>
