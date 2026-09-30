@@ -25,10 +25,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "border-b border-violet-100 bg-white/85 backdrop-blur-md"
-          : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 border-b border-violet-200/60 bg-white/90 shadow-[0_2px_12px_rgba(124,58,237,0.08)] backdrop-blur-md transition-colors duration-300 ${
+        scrolled ? "border-violet-100 bg-white/85" : ""
       }`}
       style={{ overflowX: "hidden", boxSizing: "border-box" }}
     >
@@ -41,7 +39,7 @@ export default function Navbar() {
           href="#top"
           className="mr-auto flex shrink-0 items-center gap-2 rounded-lg py-0.5 transition-transform duration-200 hover:scale-[1.02] sm:gap-3"
         >
-          <LogoCircle size={48} />
+          <LogoCircle size={30} />
           <span
             className="font-script whitespace-nowrap text-[22px] text-slate-950 sm:text-[26px] lg:text-[30px]"
             style={{ fontFamily: "var(--font-script), cursive" }}
