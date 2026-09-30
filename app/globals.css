@@ -5,6 +5,7 @@
   --color-foreground: var(--foreground);
   --font-heading: var(--font-roboto);
   --font-body: var(--font-roboto);
+  --font-script: var(--font-script);
 }
 
 :root {

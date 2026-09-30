@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { site } from "@/lib/site";
-import Logo from "./Logo";
+import LogoCircle from "./LogoCircle";
 
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -56,8 +56,14 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="flex flex-col gap-4">
-            <a href="#top" className="inline-flex rounded-lg transition-transform duration-200 hover:scale-[1.02]">
-              <Logo />
+            <a href="#top" className="inline-flex items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.02]">
+              <LogoCircle size={48} />
+              <span
+                className="font-script text-[28px] text-slate-950"
+                style={{ fontFamily: "var(--font-script), cursive" }}
+              >
+                Dr. Swami Karri
+              </span>
             </a>
             <p className="max-w-xs text-[16px] leading-relaxed text-slate-600">
               {site.title}. Committed to precise, compassionate and accessible

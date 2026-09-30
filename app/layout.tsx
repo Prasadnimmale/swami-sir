@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -9,6 +9,14 @@ const roboto = Roboto({
   display: "swap",
   axes: ["wdth"],
   variable: "--font-roboto",
+});
+
+const greatVibes = Great_Vibes({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-script",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${roboto.variable} h-full antialiased`}
+      className={`${roboto.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="bg-white flex min-h-full flex-col font-body text-foreground">
         {children}
