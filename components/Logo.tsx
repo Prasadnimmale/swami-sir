@@ -25,9 +25,15 @@ export default function Logo({ size = 40, withText = true }: LogoProps) {
         >
           <defs>
             <linearGradient id={gid} x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+<<<<<<< HEAD
               <stop offset="0" stopColor="#7C3AED" />
               <stop offset="0.5" stopColor="#A78BFA" />
               <stop offset="1" stopColor="#6D28D9" />
+=======
+              <stop offset="0" stopColor="#7c3aed" />
+              <stop offset="0.5" stopColor="#8b5cf6" />
+              <stop offset="1" stopColor="#6d28d9" />
+>>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             </linearGradient>
           </defs>
           {/* Outer ring */}
@@ -65,11 +71,19 @@ export default function Logo({ size = 40, withText = true }: LogoProps) {
       </span>
       {withText ? (
         <span className="flex flex-col justify-center leading-none">
+<<<<<<< HEAD
           <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-deep-purple">
             Dr. Swami
           </span>
           <span
             className="mt-0.5 text-[20px] font-bold tracking-tight text-ink"
+=======
+          <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-slate-900">
+            Dr. Swami
+          </span>
+          <span
+            className="mt-0.5 text-[20px] font-bold tracking-tight text-slate-900"
+>>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
           >
             Karri
