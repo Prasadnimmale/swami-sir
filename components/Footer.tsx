@@ -51,36 +51,22 @@ const socials = [
 
 export default function Footer() {
   return (
-<<<<<<< HEAD
     <footer className="relative bg-ink text-white">
       <div className="h-px w-full rule-violet" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,rgba(124,58,237,0.18),transparent_65%)]" />
       <div className="relative mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-=======
-    <footer className="relative border-t border-violet-700/20 bg-gradient-to-b from-violet-100 to-white">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet-700/60 to-transparent" />
-      <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
         <div className="grid gap-10 md:grid-cols-3">
           <div className="flex flex-col gap-4">
             <a href="#top" className="inline-flex items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.02]">
               <LogoCircle size={48} />
               <span
-<<<<<<< HEAD
                 className="font-script text-[28px] text-white"
-=======
-                className="font-script text-[28px] text-slate-950"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
                 style={{ fontFamily: "var(--font-script), cursive" }}
               >
                 Dr. Swami Karri
               </span>
             </a>
-<<<<<<< HEAD
             <p className="max-w-xs text-[16px] leading-relaxed text-violet-200">
-=======
-            <p className="max-w-xs text-[16px] leading-relaxed text-slate-600">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
               {site.title}. Committed to precise, compassionate and accessible
               healthcare in Visakhapatnam.
             </p>
@@ -91,11 +77,7 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-<<<<<<< HEAD
                 className="py-1.5 font-body text-[15px] text-violet-200 transition-colors hover:text-violet-300"
-=======
-                className="py-1.5 font-body text-[15px] text-slate-500 transition-colors hover:text-violet-800"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
               >
                 {link.label}
               </a>
@@ -103,17 +85,10 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-<<<<<<< HEAD
             <p className="font-heading text-lg font-semibold text-white">
               Follow
             </p>
             <p className="font-body text-[16px] text-violet-200">
-=======
-            <p className="font-heading text-lg font-semibold text-slate-900">
-              Follow
-            </p>
-            <p className="font-body text-[16px] text-slate-600">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
               Stay updated on his hospitals, media appearances and community
               initiatives.
             </p>
@@ -125,11 +100,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-<<<<<<< HEAD
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-light/40 text-violet-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-light hover:bg-primary hover:text-white hover:shadow-[0_6px_18px_rgba(124,58,237,0.45)]"
-=======
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-violet-300 text-slate-500 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-700 hover:bg-violet-700 hover:text-white hover:shadow-[0_4px_14px_rgba(124,58,237,0.35)]"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
@@ -138,7 +109,6 @@ export default function Footer() {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-light/20 pt-8 sm:flex-row">
           <p className="font-body text-sm text-violet-300/80">
             © {new Date().getFullYear()} Dr. Swami Karri. All rights reserved.
@@ -146,15 +116,6 @@ export default function Footer() {
           <p className="flex items-center gap-1.5 font-body text-sm text-violet-300/80">
             Compassion in every diagnosis
             <Heart className="h-3.5 w-3.5 fill-primary-light text-primary-light" />
-=======
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-violet-200 pt-8 sm:flex-row">
-          <p className="font-body text-sm text-slate-400">
-            © {new Date().getFullYear()} Dr. Swami Karri. All rights reserved.
-          </p>
-          <p className="flex items-center gap-1.5 font-body text-sm text-slate-400">
-            Compassion in every diagnosis
-            <Heart className="h-3.5 w-3.5 fill-violet-700 text-violet-700" />
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
           </p>
         </div>
       </div>

@@ -41,11 +41,7 @@ const features: Feature[] = [
 
 export default function Featured() {
   return (
-<<<<<<< HEAD
     <section id="media" className="section-violet py-20 sm:py-28">
-=======
-    <section id="media" className="bg-violet-50 py-20 sm:py-28">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Featured In"
@@ -64,13 +60,8 @@ export default function Featured() {
                 }`}
               >
               <div className="relative mx-auto w-full max-w-md">
-<<<<<<< HEAD
                 <div className="absolute -inset-3 rounded-[26px] bg-gradient-to-tr from-primary/15 to-primary-light/20 blur-2xl" />
                 <div className="media-frame group">
-=======
-                <div className="absolute -inset-3 rounded-[26px] bg-gradient-to-tr from-violet-500/15 to-transparent blur-2xl" />
-                <div className="group relative overflow-hidden rounded-2xl border border-violet-500/15 bg-white transition-colors duration-500 hover:border-violet-500/50">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
                   <Image
                     src={f.image}
                     alt={f.title}
@@ -78,49 +69,29 @@ export default function Featured() {
                     height={f.imageHeight ?? 650}
                     className="h-auto w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-<<<<<<< HEAD
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.14),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-=======
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.2),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
                 </div>
               </div>
 
               <div className="flex flex-col items-start">
-<<<<<<< HEAD
                 <span className="tag inline-flex items-center gap-2 px-4 py-1.5 font-body text-sm font-medium">
                   <Mic2 className="h-3.5 w-3.5" />
                   {f.category}
                 </span>
                 <h3 className="font-heading mt-4 text-2xl font-semibold text-ink sm:text-3xl">
-=======
-                <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/25 bg-violet-500/5 px-4 py-1.5 font-body text-sm font-medium text-violet-600">
-                  <Mic2 className="h-3.5 w-3.5" />
-                  {f.category}
-                </span>
-                <h3 className="font-heading mt-4 text-2xl font-semibold text-slate-900 sm:text-3xl">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
                   {f.title}
                 </h3>
                 {Array.isArray(f.body) ? (
                   f.body.map((paragraph) => (
                     <p
                       key={paragraph}
-<<<<<<< HEAD
                       className="mt-4 leading-relaxed text-ink-soft"
-=======
-                      className="mt-4 leading-relaxed text-slate-500"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
                     >
                       {paragraph}
                     </p>
                   ))
                 ) : (
-<<<<<<< HEAD
                   <p className="mt-4 leading-relaxed text-ink-soft">
-=======
-                  <p className="mt-4 leading-relaxed text-slate-500">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
                     {f.body}
                   </p>
                 )}

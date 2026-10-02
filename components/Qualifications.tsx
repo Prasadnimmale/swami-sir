@@ -28,11 +28,7 @@ const sources = [
 
 export default function Qualifications() {
   return (
-<<<<<<< HEAD
     <section id="qualifications" className="section-white py-20 sm:py-28">
-=======
-    <section id="qualifications" className="bg-white py-20 sm:py-28">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Qualifications"
@@ -42,7 +38,6 @@ export default function Qualifications() {
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {qualifications.map((q, i) => (
             <Reveal key={q.title} className="h-full" delay={i * 150}>
-<<<<<<< HEAD
               <div className="card card-soft card-hover group relative flex h-full flex-col overflow-hidden p-8">
                 <div className="icon-chip absolute right-6 top-6 flex h-12 w-12 items-center justify-center">
                   <GraduationCap className="h-6 w-6" />
@@ -57,35 +52,14 @@ export default function Qualifications() {
                   {q.subtitle}
                 </p>
                 <p className="mt-4 leading-relaxed text-ink-soft">{q.body}</p>
-=======
-              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-violet-100 bg-gradient-to-b from-white to-violet-50 p-8 transition-colors hover:border-violet-500/40">
-                <div className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10">
-                  <GraduationCap className="h-6 w-6 text-violet-500" />
-                </div>
-                <p className="font-body text-sm font-semibold uppercase tracking-widest text-violet-500">
-                  Qualification 0{i + 1}
-                </p>
-                <h3 className="font-heading mt-4 text-3xl font-bold text-slate-900">
-                  {q.title}
-                </h3>
-                <p className="mt-2 font-body text-base font-semibold text-violet-700">
-                  {q.subtitle}
-                </p>
-                <p className="mt-4 leading-relaxed text-slate-500">{q.body}</p>
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
               </div>
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={200}>
-<<<<<<< HEAD
           <div className="card card-soft mt-8 flex flex-wrap items-center gap-3 rounded-2xl p-6">
           <p className="font-body text-sm font-medium text-ink-soft">
-=======
-          <div className="mt-8 flex flex-wrap items-center gap-3 rounded-2xl border border-violet-100 bg-violet-50 p-6">
-          <p className="font-body text-sm font-medium text-slate-500">
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             Sources:
           </p>
           {sources.map((s) => (
@@ -94,11 +68,7 @@ export default function Qualifications() {
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< HEAD
               className="tag inline-flex items-center gap-1.5 px-4 py-1.5 font-body text-sm"
-=======
-              className="inline-flex items-center gap-1.5 rounded-full border border-violet-500/25 bg-violet-500/5 px-4 py-1.5 font-body text-sm text-violet-600 transition-colors hover:bg-violet-500/15"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             >
               {s.label}
               <ExternalLink className="h-3.5 w-3.5" />

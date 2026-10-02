@@ -9,7 +9,6 @@
 }
 
 :root {
-<<<<<<< HEAD
   /* Brand */
   --primary: #7c3aed;
   --primary-dark: #5b21b6;
@@ -34,15 +33,10 @@
 
   --background: var(--white);
   --foreground: var(--text-primary);
-=======
-  --background: #ffffff;
-  --foreground: #1e1b2e;
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
   --navbar-height: 80px;
 }
 
 @theme {
-<<<<<<< HEAD
   /* Brand */
   --color-primary: #7c3aed;
   --color-primary-dark: #5b21b6;
@@ -67,8 +61,6 @@
   --color-ink: #241b35;
   --color-ink-soft: #6b6475;
 
-=======
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
   --animate-fade-up: fade-up 0.7s ease-out both;
   --animate-fade-in: fade-in 0.9s ease-out both;
 
@@ -97,10 +89,7 @@ html {
   scroll-behavior: smooth;
   max-width: 100%;
   overflow-x: hidden;
-<<<<<<< HEAD
   scrollbar-color: #c4b5fd #f5f3ff;
-=======
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
 }
 
 body {
@@ -122,11 +111,7 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-<<<<<<< HEAD
   background: #f5f3ff;
-=======
-  background: #f3f0ff;
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
 }
 ::-webkit-scrollbar-thumb {
   background: #c4b5fd;
@@ -136,7 +121,6 @@ body {
   background: #7c3aed;
 }
 
-<<<<<<< HEAD
 /* ------------------------------------------------------------------ *
  * Gradient system
  * ------------------------------------------------------------------ */
@@ -207,22 +191,12 @@ body {
 /* Gradient text — used sparingly */
 .text-violet-gradient {
   background-image: linear-gradient(90deg, #7c3aed, #6d28d9);
-=======
-.text-gold-gradient {
-  background: linear-gradient(
-    100deg,
-    #ede9fe 0%,
-    #8b5cf6 45%,
-    #6d28d9 80%
-  );
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-<<<<<<< HEAD
 /* ------------------------------------------------------------------ *
  * Components
  * ------------------------------------------------------------------ */
@@ -376,8 +350,6 @@ body {
   }
 }
 
-=======
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
 @keyframes doctor-reveal {
   0% {
     opacity: 0;
@@ -492,19 +464,11 @@ body {
 @keyframes hero-glow {
   0%,
   100% {
-<<<<<<< HEAD
     opacity: 0.35;
     transform: scale(1);
   }
   50% {
     opacity: 0.75;
-=======
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
     transform: scale(1.08);
   }
 }
@@ -565,8 +529,4 @@ body {
     opacity: 1;
     transform: none;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02

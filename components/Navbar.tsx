@@ -25,13 +25,8 @@ export default function Navbar() {
 
   return (
     <header
-<<<<<<< HEAD
       className={`fixed inset-x-0 top-0 z-50 border-b-2 border-[#C4B5FD] shadow-[0_6px_16px_-6px_rgba(76,29,149,0.35)] transition-colors duration-300 ${
         scrolled ? "navbar-surface-scrolled" : "navbar-surface"
-=======
-      className={`fixed inset-x-0 top-0 z-50 border-b border-violet-100 bg-white shadow-[0_2px_12px_rgba(124,58,237,0.08)] transition-colors duration-300 ${
-        scrolled ? "border-violet-200" : ""
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
       }`}
       style={{ overflowX: "hidden", boxSizing: "border-box" }}
     >
@@ -46,11 +41,7 @@ export default function Navbar() {
         >
           <LogoCircle size={30} />
           <span
-<<<<<<< HEAD
             className="font-script whitespace-nowrap text-[22px] text-deep-purple sm:text-[26px] lg:text-[30px]"
-=======
-            className="font-script whitespace-nowrap text-[22px] text-slate-900 sm:text-[26px] lg:text-[30px]"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             style={{ fontFamily: "var(--font-script), cursive" }}
           >
             Dr. Swami Karri
@@ -63,26 +54,15 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-<<<<<<< HEAD
               className="group/nav relative font-body text-base font-medium text-ink transition-colors hover:text-primary"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-primary to-purple transition-all duration-300 group-hover/nav:w-full" />
-=======
-              className="group/nav relative font-body text-base font-medium text-slate-600 transition-colors hover:text-violet-600"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-violet-600 transition-all duration-300 group-hover/nav:w-full" />
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             </a>
           ))}
           <a
             href="#contact"
-<<<<<<< HEAD
             className="btn-pill px-6 py-2.5 font-body text-base font-medium"
-=======
-            className="rounded-full border border-violet-600/50 bg-violet-600 px-6 py-2.5 font-body text-base font-medium text-white shadow-[0_2px_12px_rgba(124,58,237,0.3)] transition-all duration-300 hover:bg-violet-500 hover:shadow-[0_4px_20px_rgba(124,58,237,0.45)]"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
           >
             Let&apos;s Talk
           </a>
@@ -94,37 +74,21 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-<<<<<<< HEAD
           className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-300 bg-violet-100 shadow-sm transition-colors hover:border-violet-400 hover:bg-violet-200 lg:hidden"
           style={{ boxSizing: "border-box" }}
         >
           <span
             className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
-=======
-          className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-200 bg-white shadow-sm transition-colors hover:border-violet-400 lg:hidden"
-          style={{ boxSizing: "border-box" }}
-        >
-          <span
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
               open ? "rotate-45" : "-translate-y-[7px]"
             }`}
           />
           <span
-<<<<<<< HEAD
             className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
-=======
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
               open ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-<<<<<<< HEAD
             className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
-=======
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
               open ? "-rotate-45" : "translate-y-[7px]"
             }`}
           />
@@ -133,15 +97,9 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-<<<<<<< HEAD
         className={`navbar-panel overflow-hidden transition-all duration-300 lg:hidden ${
           open
             ? "max-h-[600px] border-t border-hairline opacity-100"
-=======
-        className={`overflow-hidden bg-white/95 backdrop-blur-md transition-all duration-300 lg:hidden ${
-          open
-            ? "max-h-[600px] border-t border-violet-100 opacity-100"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             : "max-h-0 opacity-0"
         }`}
       >
@@ -151,11 +109,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-<<<<<<< HEAD
               className="border-b border-hairline py-3 font-body text-[15px] font-medium text-ink-soft transition-colors hover:bg-violet-50 hover:text-purple"
-=======
-              className="border-b border-violet-100 py-3 font-body text-[15px] font-medium text-slate-600 transition-colors hover:text-violet-800"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
             >
               {link.label}
             </a>
@@ -163,11 +117,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-<<<<<<< HEAD
             className="btn-secondary mt-4 px-5 py-2.5 text-center font-body text-[15px] font-medium"
-=======
-            className="mt-4 rounded-full border border-violet-700/40 bg-violet-700/10 px-5 py-2.5 text-center font-body text-[15px] font-medium text-violet-800"
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
           >
             Let&apos;s Talk
           </a>

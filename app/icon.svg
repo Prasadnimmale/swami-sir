@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-<<<<<<< HEAD
       <stop offset="0" stop-color="#7c3aed"/>
       <stop offset="0.5" stop-color="#a78bfa"/>
-=======
-      <stop offset="0" stop-color="#ede9fe"/>
-      <stop offset="0.5" stop-color="#8b5cf6"/>
->>>>>>> 191f7a3dc2d772f69b97cab5f84d36ee1da6be02
       <stop offset="1" stop-color="#6d28d9"/>
     </linearGradient>
   </defs>
