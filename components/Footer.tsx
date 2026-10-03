@@ -59,7 +59,14 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <a href="#top" className="inline-flex items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.02]">
               <LogoCircle size={56} />
+<<<<<<< HEAD
               <span className="font-brand text-[26px] font-semibold tracking-tight text-white">
+=======
+              <span
+                className="font-script text-[30px] text-white -ml-0.5"
+                style={{ fontFamily: "var(--font-script), cursive" }}
+              >
+>>>>>>> 8a9a3b13dae61f2b7ddd29714737ade9083c47a6
                 Dr. Swami Karri
               </span>
             </a>

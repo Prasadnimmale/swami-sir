@@ -5,7 +5,11 @@
   --color-foreground: var(--foreground);
   --font-heading: var(--font-roboto);
   --font-body: var(--font-roboto);
+<<<<<<< HEAD
   --font-brand: var(--font-playfair);
+=======
+  --font-script: var(--font-script);
+>>>>>>> 8a9a3b13dae61f2b7ddd29714737ade9083c47a6
 }
 
 :root {
