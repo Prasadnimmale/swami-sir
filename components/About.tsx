@@ -26,7 +26,7 @@ export default function About() {
               <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-tr from-primary/15 to-primary-light/20 blur-2xl" />
               <div className="media-frame group">
                 <Image
-                  src="/images/doctor-about.jpg"
+                  src="/images/doctor-about.webp"
                   alt="Dr. Swami Karri"
                   width={554}
                   height={554}
