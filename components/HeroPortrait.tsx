@@ -4,12 +4,10 @@ import { Award, HeartHandshake } from "lucide-react";
 export default function HeroPortrait() {
   return (
     <div className="relative mx-auto w-full max-w-[300px] sm:max-w-[360px] lg:max-w-[420px]">
-      <div className="absolute -inset-6 rounded-[2rem] bg-primary/15 blur-3xl animate-hero-glow" />
-
-      <div className="relative animate-float-soft">
+      <div className="relative">
         <div className="aspect-square w-full overflow-hidden rounded-[2rem] border border-violet-200 bg-violet-50/60 shadow-[0_18px_55px_rgba(124,58,237,0.16)]">
           <Image
-            src="/images/ssk-1.jpeg"
+            src="/images/ssk.jpg"
             alt="Dr. Swami Karri"
             width={224}
             height={228}
