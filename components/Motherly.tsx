@@ -242,9 +242,9 @@ export default function Motherly() {
                 </span>
               </button>
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white/75 to-transparent" />
-              <div className="absolute bottom-4 left-4 z-[2] flex items-center gap-2.5">
-                <span className="h-2 w-2 rounded-full bg-primary" />
-                <span className="rounded-md bg-white/80 px-2.5 py-1 font-body text-xs font-semibold uppercase tracking-[0.2em] text-deep-purple backdrop-blur">
+              <div className="absolute bottom-4 left-4 z-[2] flex items-center gap-2.5 max-w-[calc(100%-80px)]">
+                <span className="h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
+                <span className="rounded-md bg-white/80 px-2.5 py-1 font-body text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-deep-purple backdrop-blur whitespace-normal break-words">
                   Motherly Women &amp; Children Hospital
                 </span>
               </div>
