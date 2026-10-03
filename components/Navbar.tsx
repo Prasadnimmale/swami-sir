@@ -40,14 +40,7 @@ export default function Navbar() {
           className="mr-auto flex shrink-0 items-center gap-2 rounded-lg py-0.5 transition-transform duration-200 hover:scale-[1.02] sm:gap-3"
         >
           <LogoCircle size={44} />
-<<<<<<< HEAD
           <span className="font-brand whitespace-nowrap text-[19px] font-semibold tracking-tight text-deep-purple sm:text-[21px] md:text-[23px] lg:text-[26px] leading-tight">
-=======
-          <span
-            className="font-script whitespace-nowrap text-[20px] text-deep-purple sm:text-[22px] md:text-[24px] lg:text-[28px] -ml-0.5 leading-none"
-            style={{ fontFamily: "var(--font-script), cursive" }}
-          >
->>>>>>> 8a9a3b13dae61f2b7ddd29714737ade9083c47a6
             Dr. Swami Karri
           </span>
         </a>
