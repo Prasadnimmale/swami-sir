@@ -7,7 +7,7 @@ export default function HeroPortrait() {
       <div className="relative">
         <div className="aspect-square w-full overflow-hidden rounded-[2rem] border border-violet-200 bg-violet-50/60 shadow-[0_18px_55px_rgba(124,58,237,0.16)]">
           <Image
-            src="/images/ssk.jpg"
+            src="/images/ssk-1.jpeg"
             alt="Dr. Swami Karri"
             width={224}
             height={228}
