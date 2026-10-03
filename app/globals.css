@@ -1,0 +1,532 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-heading: var(--font-roboto);
+  --font-body: var(--font-roboto);
+  --font-brand: var(--font-playfair);
+}
+
+:root {
+  /* Brand */
+  --primary: #7c3aed;
+  --primary-dark: #5b21b6;
+  --primary-light: #a78bfa;
+
+  /* Violet scale */
+  --violet-50: #f5f3ff;
+  --violet-100: #ede9fe;
+  --violet-200: #ddd6fe;
+  --violet-300: #c4b5fd;
+
+  --purple: #6d28d9;
+  --deep-purple: #4c1d95;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --off-white: #faf9ff;
+
+  --text-primary: #241b35;
+  --text-secondary: #6b6475;
+  --border: #e9e3f5;
+
+  --background: var(--white);
+  --foreground: var(--text-primary);
+  --navbar-height: 80px;
+}
+
+@theme {
+  /* Brand */
+  --color-primary: #7c3aed;
+  --color-primary-dark: #5b21b6;
+  --color-primary-light: #a78bfa;
+
+  /* Purple */
+  --color-purple: #6d28d9;
+  --color-deep-purple: #4c1d95;
+
+  /* Violet scale (exact brand values) */
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+
+  /* Surfaces */
+  --color-off-white: #faf9ff;
+  --color-hairline: #e9e3f5;
+
+  /* Text */
+  --color-ink: #241b35;
+  --color-ink-soft: #6b6475;
+
+  --animate-fade-up: fade-up 0.7s ease-out both;
+  --animate-fade-in: fade-in 0.9s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+  scrollbar-color: #c4b5fd #f5f3ff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f3ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* ------------------------------------------------------------------ *
+ * Gradient system
+ * ------------------------------------------------------------------ */
+
+.gradient-primary {
+  background-image: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.gradient-soft {
+  background-image: linear-gradient(135deg, #ffffff, #f5f3ff);
+}
+
+.gradient-violet-glow {
+  background-image: linear-gradient(135deg, #f5f3ff, #ede9fe, #ddd6fe);
+}
+
+.gradient-hero {
+  background-image: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #faf9ff 45%,
+    #f5f3ff 75%,
+    #ede9fe 100%
+  );
+}
+
+/* Section backgrounds — alternate white / off-white / soft violet */
+.section-white {
+  background-color: #ffffff;
+}
+
+.section-off-white {
+  background-color: #faf9ff;
+}
+
+.section-violet {
+  background-color: #f5f3ff;
+}
+
+.section-soft-gradient {
+  background-image: linear-gradient(180deg, #faf9ff 0%, #f5f3ff 55%, #faf9ff 100%);
+}
+
+/* Hero atmosphere — white base with soft violet glow */
+.hero-atmosphere {
+  background-image: radial-gradient(
+      circle at 85% 30%,
+      rgba(124, 58, 237, 0.12),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 6% 24%,
+      rgba(167, 139, 250, 0.14),
+      transparent 34%
+    ),
+    /* Vertical, so the band directly behind the navbar stays pure white and the
+       violet only develops further down the hero. */
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #ffffff 16%,
+      #faf9ff 46%,
+      #f5f3ff 74%,
+      #ede9fe 100%
+    );
+}
+
+/* Gradient text — used sparingly */
+.text-violet-gradient {
+  background-image: linear-gradient(90deg, #7c3aed, #6d28d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ------------------------------------------------------------------ *
+ * Components
+ * ------------------------------------------------------------------ */
+
+@layer components {
+  /* ---------- Navbar ---------- */
+  /* White base flowing into a clearly visible light violet. The violet end is
+     #C4B5FD (not the near-white #F5F3FF) so the navbar stays visibly different
+     from the pale hero directly beneath it. */
+  .navbar-surface {
+    background-color: #ffffff;
+    background-image: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f5f3ff 30%,
+      #c4b5fd 100%
+    );
+  }
+
+  /* A touch more violet once the page is scrolled */
+  .navbar-surface-scrolled {
+    background-color: #ffffff;
+    background-image: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #ede9fe 25%,
+      #a78bfa 100%
+    );
+  }
+
+  /* Light surface for the mobile dropdown panel */
+  .navbar-panel {
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #ffffff 0%, #faf9ff 100%);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-primary {
+    border-radius: 9999px;
+    background-image: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
+    transition: background-image 0.3s ease, box-shadow 0.3s ease,
+      transform 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-image: linear-gradient(135deg, #6d28d9, #4c1d95);
+    box-shadow: 0 14px 38px rgba(124, 58, 237, 0.28);
+  }
+
+  .btn-secondary {
+    border-radius: 9999px;
+    background-color: #ffffff;
+    color: #6d28d9;
+    border: 1px solid #c4b5fd;
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+      color 0.3s ease;
+  }
+  .btn-secondary:hover {
+    background-color: #f5f3ff;
+    border-color: #7c3aed;
+    color: #4c1d95;
+  }
+
+  /* Compact pill CTA (navbar) */
+  .btn-pill {
+    border-radius: 9999px;
+    background-image: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: #ffffff;
+    box-shadow: 0 2px 12px rgba(124, 58, 237, 0.2);
+    transition: background-image 0.3s ease, box-shadow 0.3s ease;
+  }
+  .btn-pill:hover {
+    background-image: linear-gradient(135deg, #6d28d9, #4c1d95);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+  }
+
+  /* ---------- Cards ---------- */
+  .card {
+    border-radius: 18px;
+    background-color: #ffffff;
+    border: 1px solid #e9e3f5;
+  }
+
+  /* Softer white surface for large content cards */
+  .card-soft {
+    background-image: linear-gradient(180deg, #ffffff 0%, #faf9ff 100%);
+  }
+
+  .card-hover {
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+  .card-hover:hover {
+    border-color: #c4b5fd;
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.1);
+  }
+
+  /* ---------- Media / image frames ---------- */
+  .media-frame {
+    position: relative;
+    border-radius: 18px;
+    border: 1px solid #e9e3f5;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  }
+  .media-frame:hover {
+    border-color: #c4b5fd;
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.1);
+  }
+
+  /* ---------- Icon container ---------- */
+  .icon-chip {
+    border-radius: 14px;
+    background-color: #f5f3ff;
+    color: #7c3aed;
+  }
+
+  /* ---------- Small tags / pills ---------- */
+  .tag {
+    border-radius: 9999px;
+    border: 1px solid #ddd6fe;
+    background-color: #f5f3ff;
+    color: #6d28d9;
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+      color 0.3s ease;
+  }
+  .tag:hover {
+    background-color: #ede9fe;
+    border-color: #c4b5fd;
+    color: #4c1d95;
+  }
+
+  /* ---------- Links ---------- */
+  .link-violet {
+    color: #6d28d9;
+    transition: color 0.25s ease;
+  }
+  .link-violet:hover {
+    color: #4c1d95;
+  }
+
+  /* ---------- Divider ---------- */
+  .rule-violet {
+    background-image: linear-gradient(
+      90deg,
+      #7c3aed 0%,
+      #a78bfa 55%,
+      rgba(221, 214, 254, 0) 100%
+    );
+  }
+}
+
+@keyframes doctor-reveal {
+  0% {
+    opacity: 0;
+    transform: translateX(80px) scale(0.94);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-doctor-reveal {
+  animation: doctor-reveal 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.2s;
+}
+
+@keyframes badge-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-badge-pop {
+  animation: badge-pop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.badge-delay-1 {
+  animation-delay: 0.9s;
+}
+
+.badge-delay-2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes scan-sweep {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-scan-sweep {
+  animation: scan-sweep 5s ease-in-out infinite;
+}
+
+@keyframes hero-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-item {
+  opacity: 0;
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes title-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-title-shimmer {
+  background-size: 200% auto;
+  animation: title-shimmer 5s linear infinite;
+}
+
+@keyframes hero-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+.animate-hero-glow {
+  animation: hero-glow 6s ease-in-out infinite;
+}
+
+@keyframes hero-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0);
+  }
+}
+
+.animate-hero-drift {
+  animation: hero-drift 7s ease-in-out infinite;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-doctor-reveal,
+  .animate-badge-pop,
+  .animate-float-slow,
+  .animate-float-soft,
+  .animate-hero-glow,
+  .animate-hero-drift,
+  .animate-spin-slow,
+  .animate-title-shimmer,
+  .hero-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
