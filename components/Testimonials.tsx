@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-white py-20 sm:py-28">
+    <section id="testimonials" className="section-off-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Patient Testimonials"
@@ -42,25 +42,25 @@ export default function Testimonials() {
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {testimonials.map((t, i) => (
             <Reveal key={t.category} className="h-full" delay={(i % 2) * 150}>
-              <figure className="relative flex h-full flex-col rounded-2xl border border-violet-100 bg-gradient-to-b from-white to-violet-50 p-8 transition-colors hover:border-violet-500/40">
-                <Quote className="absolute right-8 top-8 h-8 w-8 text-violet-500/20" />
+              <figure className="card card-soft card-hover relative flex h-full flex-col p-8">
+                <Quote className="absolute right-8 top-8 h-8 w-8 text-violet-300" />
                 <div className="flex gap-1">
                   {Array.from({ length: 5 }).map((_, j) => (
-                    <Star key={j} className="h-4 w-4 fill-violet-500 text-violet-500" />
+                    <Star key={j} className="h-4 w-4 fill-primary text-primary" />
                   ))}
                 </div>
-                <blockquote className="mt-5 leading-relaxed text-slate-600">
+                <blockquote className="mt-5 leading-relaxed text-ink-soft">
                   {t.body}
                 </blockquote>
                 <figcaption className="mt-6 flex flex-col gap-2 border-t border-violet-200 pt-4">
-                  <span className="font-heading text-lg font-semibold text-violet-600">
+                  <span className="font-heading text-lg font-semibold text-purple">
                     {t.category}
                   </span>
-                  <span className="font-body text-sm text-slate-600">
+                  <span className="font-body text-sm text-ink-soft">
                     {t.tag}
                   </span>
                   {t.sources ? (
-                    <span className="font-body text-xs text-slate-400">
+                    <span className="font-body text-xs text-ink-soft">
                       Verified via Google reviews
                     </span>
                   ) : null}

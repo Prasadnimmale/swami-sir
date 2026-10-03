@@ -25,8 +25,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-violet-100 bg-white shadow-[0_2px_12px_rgba(124,58,237,0.08)] transition-colors duration-300 ${
-        scrolled ? "border-violet-200" : ""
+      className={`fixed inset-x-0 top-0 z-50 border-b-2 border-[#C4B5FD] shadow-[0_6px_16px_-6px_rgba(76,29,149,0.35)] transition-colors duration-300 ${
+        scrolled ? "navbar-surface-scrolled" : "navbar-surface"
       }`}
       style={{ overflowX: "hidden", boxSizing: "border-box" }}
     >
@@ -39,9 +39,9 @@ export default function Navbar() {
           href="#top"
           className="mr-auto flex shrink-0 items-center gap-2 rounded-lg py-0.5 transition-transform duration-200 hover:scale-[1.02] sm:gap-3"
         >
-          <LogoCircle size={30} />
+          <LogoCircle size={38} />
           <span
-            className="font-script whitespace-nowrap text-[22px] text-slate-900 sm:text-[26px] lg:text-[30px]"
+            className="font-script whitespace-nowrap text-[22px] text-deep-purple sm:text-[26px] lg:text-[30px]"
             style={{ fontFamily: "var(--font-script), cursive" }}
           >
             Dr. Swami Karri
@@ -54,15 +54,15 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="group/nav relative font-body text-base font-medium text-slate-600 transition-colors hover:text-violet-600"
+              className="group/nav relative font-body text-base font-medium text-ink transition-colors hover:text-primary"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-violet-600 transition-all duration-300 group-hover/nav:w-full" />
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-primary to-purple transition-all duration-300 group-hover/nav:w-full" />
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-full border border-violet-600/50 bg-violet-600 px-6 py-2.5 font-body text-base font-medium text-white shadow-[0_2px_12px_rgba(124,58,237,0.3)] transition-all duration-300 hover:bg-violet-500 hover:shadow-[0_4px_20px_rgba(124,58,237,0.45)]"
+            className="btn-pill px-6 py-2.5 font-body text-base font-medium"
           >
             Let&apos;s Talk
           </a>
@@ -74,21 +74,21 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-200 bg-white shadow-sm transition-colors hover:border-violet-400 lg:hidden"
+          className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-300 bg-violet-100 shadow-sm transition-colors hover:border-violet-400 hover:bg-violet-200 lg:hidden"
           style={{ boxSizing: "border-box" }}
         >
           <span
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
+            className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
               open ? "rotate-45" : "-translate-y-[7px]"
             }`}
           />
           <span
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
+            className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
               open ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-slate-900 transition-all duration-300 ${
+            className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
               open ? "-rotate-45" : "translate-y-[7px]"
             }`}
           />
@@ -97,9 +97,9 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden bg-white/95 backdrop-blur-md transition-all duration-300 lg:hidden ${
+        className={`navbar-panel overflow-hidden transition-all duration-300 lg:hidden ${
           open
-            ? "max-h-[600px] border-t border-violet-100 opacity-100"
+            ? "max-h-[600px] border-t border-hairline opacity-100"
             : "max-h-0 opacity-0"
         }`}
       >
@@ -109,7 +109,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="border-b border-violet-100 py-3 font-body text-[15px] font-medium text-slate-600 transition-colors hover:text-violet-800"
+              className="border-b border-hairline py-3 font-body text-[15px] font-medium text-ink-soft transition-colors hover:bg-violet-50 hover:text-purple"
             >
               {link.label}
             </a>
@@ -117,7 +117,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-4 rounded-full border border-violet-700/40 bg-violet-700/10 px-5 py-2.5 text-center font-body text-[15px] font-medium text-violet-800"
+            className="btn-secondary mt-4 px-5 py-2.5 text-center font-body text-[15px] font-medium"
           >
             Let&apos;s Talk
           </a>

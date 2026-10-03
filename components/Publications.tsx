@@ -39,7 +39,7 @@ const publications = [
 
 export default function Publications() {
   return (
-    <section id="research" className="bg-white py-20 sm:py-28">
+    <section id="research" className="section-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Publications & Research"
@@ -50,25 +50,25 @@ export default function Publications() {
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
           {publications.map((pub, i) => (
             <Reveal key={pub.title} className="h-full" delay={i * 150}>
-              <div className="flex h-full flex-col rounded-2xl border border-violet-100 bg-gradient-to-b from-white to-violet-50 p-8 transition-colors hover:border-violet-500/40">
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10">
-                  <pub.icon className="h-6 w-6 text-violet-500" />
+              <div className="card card-soft card-hover flex h-full flex-col p-8">
+                <div className="flex items-center gap-4">
+                  <div className="icon-chip flex h-12 w-12 shrink-0 items-center justify-center">
+                    <pub.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-heading text-2xl font-semibold text-ink">
+                    {pub.title}
+                  </h3>
                 </div>
-                <h3 className="font-heading text-2xl font-semibold text-slate-900">
-                  {pub.title}
-                </h3>
-              </div>
-              <ul className="mt-6 flex flex-col gap-5">
-                {pub.points.map((point) => (
-                  <li key={point.text} className="flex items-start gap-3">
-                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500" />
-                    <span className="text-[16px] leading-relaxed text-slate-500">
-                      {point.text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-6 flex flex-col gap-5">
+                  {pub.points.map((point) => (
+                    <li key={point.text} className="flex items-start gap-3">
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span className="text-[16px] leading-relaxed text-ink-soft">
+                        {point.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </Reveal>
           ))}

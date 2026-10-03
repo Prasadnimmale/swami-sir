@@ -51,21 +51,22 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-violet-700/20 bg-gradient-to-b from-violet-100 to-white">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet-700/60 to-transparent" />
-      <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <footer className="relative bg-ink text-white">
+      <div className="h-px w-full rule-violet" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_at_top,rgba(124,58,237,0.18),transparent_65%)]" />
+      <div className="relative mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="flex flex-col gap-4">
             <a href="#top" className="inline-flex items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.02]">
               <LogoCircle size={48} />
               <span
-                className="font-script text-[28px] text-slate-950"
+                className="font-script text-[28px] text-white"
                 style={{ fontFamily: "var(--font-script), cursive" }}
               >
                 Dr. Swami Karri
               </span>
             </a>
-            <p className="max-w-xs text-[16px] leading-relaxed text-slate-600">
+            <p className="max-w-xs text-[16px] leading-relaxed text-violet-200">
               {site.title}. Committed to precise, compassionate and accessible
               healthcare in Visakhapatnam.
             </p>
@@ -76,7 +77,7 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="py-1.5 font-body text-[15px] text-slate-500 transition-colors hover:text-violet-800"
+                className="py-1.5 font-body text-[15px] text-violet-200 transition-colors hover:text-violet-300"
               >
                 {link.label}
               </a>
@@ -84,10 +85,10 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <p className="font-heading text-lg font-semibold text-slate-900">
+            <p className="font-heading text-lg font-semibold text-white">
               Follow
             </p>
-            <p className="font-body text-[16px] text-slate-600">
+            <p className="font-body text-[16px] text-violet-200">
               Stay updated on his hospitals, media appearances and community
               initiatives.
             </p>
@@ -99,7 +100,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-violet-300 text-slate-500 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-700 hover:bg-violet-700 hover:text-white hover:shadow-[0_4px_14px_rgba(124,58,237,0.35)]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-light/40 text-violet-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-light hover:bg-primary hover:text-white hover:shadow-[0_6px_18px_rgba(124,58,237,0.45)]"
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
@@ -108,13 +109,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-violet-200 pt-8 sm:flex-row">
-          <p className="font-body text-sm text-slate-400">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-light/20 pt-8 sm:flex-row">
+          <p className="font-body text-sm text-violet-300/80">
             © {new Date().getFullYear()} Dr. Swami Karri. All rights reserved.
           </p>
-          <p className="flex items-center gap-1.5 font-body text-sm text-slate-400">
+          <p className="flex items-center gap-1.5 font-body text-sm text-violet-300/80">
             Compassion in every diagnosis
-            <Heart className="h-3.5 w-3.5 fill-violet-700 text-violet-700" />
+            <Heart className="h-3.5 w-3.5 fill-primary-light text-primary-light" />
           </p>
         </div>
       </div>
