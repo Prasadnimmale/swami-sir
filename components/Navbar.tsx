@@ -31,7 +31,7 @@ export default function Navbar() {
       style={{ overflowX: "hidden", boxSizing: "border-box" }}
     >
       <nav
-        className="mx-auto flex h-[72px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        className="mx-auto flex h-[80px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
         style={{ boxSizing: "border-box" }}
       >
         {/* Logo + Name */}
@@ -74,22 +74,22 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-300 bg-violet-100 shadow-sm transition-colors hover:border-violet-400 hover:bg-violet-200 lg:hidden"
+          className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-violet-300 bg-violet-100 shadow-sm transition-colors hover:border-violet-400 hover:bg-violet-200 lg:hidden"
           style={{ boxSizing: "border-box" }}
         >
           <span
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
-              open ? "rotate-45" : "-translate-y-[7px]"
+            className={`absolute block h-[1.5px] w-[18px] rounded-full bg-violet-600 transition-all duration-300 ${
+              open ? "rotate-45" : "-translate-y-[5px]"
             }`}
           />
           <span
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
+            className={`absolute block h-[1.5px] w-[18px] rounded-full bg-violet-600 transition-all duration-300 ${
               open ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-            className={`absolute block h-[2px] w-[22px] rounded-full bg-violet-600 transition-all duration-300 ${
-              open ? "-rotate-45" : "translate-y-[7px]"
+            className={`absolute block h-[1.5px] w-[18px] rounded-full bg-violet-600 transition-all duration-300 ${
+              open ? "-rotate-45" : "translate-y-[5px]"
             }`}
           />
         </button>

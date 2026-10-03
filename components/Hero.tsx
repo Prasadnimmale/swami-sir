@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="hero-atmosphere relative overflow-hidden pb-16 pt-[95px] sm:pt-[96px] lg:pb-24"
+      className="hero-atmosphere relative overflow-hidden pb-16 pt-[110px] sm:pt-[120px] lg:pb-24"
     >
       <div className="pointer-events-none absolute -top-10 left-1/2 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
       <div className="pointer-events-none absolute -right-40 top-1/3 h-[380px] w-[380px] rounded-full bg-primary-light/20 blur-[120px]" />
