@@ -15,7 +15,7 @@ type Feature = {
 const features: Feature[] = [
   {
     title: "TEDx International Stage",
-    image: "/images/feature-tedx.jpg",
+    image: "/images/feature-tedx.webp",
     imageWidth: 1080,
     imageHeight: 1470,
     category: "Speaking Platforms",
@@ -27,7 +27,7 @@ const features: Feature[] = [
   },
   {
     title: "Regional News Coverage",
-    image: "/images/feature-news2.jpg",
+    image: "/images/feature-news2.webp",
     imageWidth: 720,
     imageHeight: 733,
     category: "Media & Magazines",
