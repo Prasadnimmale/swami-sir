@@ -19,6 +19,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.drswamykarri.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Dr. Swamy Karri | Senior Consultant Radiologist & Healthcare Entrepreneur",
   description:
     "Dr. Karri Swamy (MBBS, DNB) — Senior Consultant Radiologist with 12+ years of experience, Founder & CEO of Aayushman Hospital, Vizag. Expert in ultrasound, CT, MRI and pediatric diagnostic care.",
