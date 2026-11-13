@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: "Dr. Swamy Karri | Senior Consultant Radiologist & Healthcare Entrepreneur",
   description:
     "Dr. Karri Swamy (MBBS, DNB) — Senior Consultant Radiologist with 12+ years of experience, Founder & CEO of Aayushman Hospital, Vizag. Expert in ultrasound, CT, MRI and pediatric diagnostic care.",
+  verification: {
+    google: "pHiVNUupCwDmWa6JJPbi8XfSkrE6VTwxvDzv70vDEl8",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
