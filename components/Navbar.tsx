@@ -41,7 +41,7 @@ export default function Navbar() {
         >
           <LogoCircle size={44} />
           <span className="font-brand whitespace-nowrap text-[19px] font-semibold tracking-tight text-deep-purple sm:text-[21px] md:text-[23px] lg:text-[26px] leading-tight">
-            Dr. Swami Karri
+            Dr. Swamy Karri
           </span>
         </a>
 

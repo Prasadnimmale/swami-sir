@@ -66,7 +66,7 @@ export default function Logo({ size = 40, withText = true }: LogoProps) {
       {withText ? (
         <span className="flex flex-col justify-center leading-none">
           <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-deep-purple">
-            Dr. Swami
+            Dr. Swamy
           </span>
           <span
             className="mt-0.5 text-[20px] font-bold tracking-tight text-ink"

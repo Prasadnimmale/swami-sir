@@ -43,7 +43,7 @@ export default function Hero() {
             className="hero-item font-heading text-5xl font-bold leading-[1.05] text-ink sm:text-6xl lg:text-[64px]"
             style={del(2)}
           >
-            Dr. Swami{" "}
+            Dr. Swamy{" "}
             <span className="text-violet-gradient animate-title-shimmer">
               Karri
             </span>

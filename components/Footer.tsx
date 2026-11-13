@@ -60,7 +60,7 @@ export default function Footer() {
             <a href="#top" className="inline-flex items-center gap-3 rounded-lg transition-transform duration-200 hover:scale-[1.02]">
               <LogoCircle size={56} />
               <span className="font-brand text-[26px] font-semibold tracking-tight text-white">
-                Dr. Swami Karri
+                Dr. Swamy Karri
               </span>
             </a>
             <p className="max-w-xs text-[16px] leading-relaxed text-violet-200">
@@ -108,7 +108,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-light/20 pt-8 sm:flex-row">
           <p className="font-body text-sm text-violet-300/80">
-            © {new Date().getFullYear()} Dr. Swami Karri. All rights reserved.
+            © {new Date().getFullYear()} Dr. Swamy Karri. All rights reserved.
           </p>
           <p className="flex items-center gap-1.5 font-body text-sm text-violet-300/80">
             Compassion in every diagnosis

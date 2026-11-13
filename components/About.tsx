@@ -27,7 +27,7 @@ export default function About() {
               <div className="media-frame group">
                 <Image
                   src="/images/doctor-about.webp"
-                  alt="Dr. Swami Karri"
+                  alt="Dr. Swamy Karri"
                   width={554}
                   height={554}
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -37,7 +37,7 @@ export default function About() {
 
               <div className="card relative mx-auto -mt-8 w-[calc(100%-3rem)] rounded-2xl border-violet-200 bg-white/95 px-6 py-5 shadow-[0_15px_40px_rgba(124,58,237,0.12)] backdrop-blur">
                 <p className="font-heading text-xl font-bold text-ink">
-                  Dr. Karri Swami
+                  Dr. Karri Swamy
                 </p>
                 <p className="font-body text-sm text-ink-soft">
                   MBBS, DNB (Radio Diagnosis)
@@ -61,14 +61,14 @@ export default function About() {
           <Reveal className="order-1">
             <div className="flex flex-col gap-6">
             <p className="text-lg leading-relaxed text-ink-soft">
-              Dr. Karri Swami, MBBS, DNB, is a dedicated pediatric specialist
+              Dr. Karri Swamy, MBBS, DNB, is a dedicated pediatric specialist
               with over 12 years of clinical experience. He offers expert care
               in both outpatient and inpatient pediatric services, with a strong
               focus on child health and development.
             </p>
             <p className="text-lg leading-relaxed text-ink-soft">
               Known for his compassionate approach and precise diagnosis, Dr.
-              Swami is actively involved in managing pediatric emergencies and
+              Swamy is actively involved in managing pediatric emergencies and
               critical care. His calm demeanor and personalized treatment plans
               have earned the trust of countless parents.
             </p>

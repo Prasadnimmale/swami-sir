@@ -20,8 +20,8 @@ const features: Feature[] = [
     imageHeight: 1470,
     category: "Speaking Platforms",
     body: [
-      "Dr. Swami Karri has been featured on the TEDx International Stage, presenting his perspectives and professional experiences to a wider audience. His participation reflects his engagement beyond clinical practice and highlights his ability to communicate ideas, experiences, and insights on a prominent international platform.",
-      "Through such speaking platforms, Dr. Swami brings together his experience in healthcare, medical diagnostics, leadership, and innovation, creating meaningful conversations around the evolving landscape of healthcare and technology.",
+      "Dr. Swamy Karri has been featured on the TEDx International Stage, presenting his perspectives and professional experiences to a wider audience. His participation reflects his engagement beyond clinical practice and highlights his ability to communicate ideas, experiences, and insights on a prominent international platform.",
+      "Through such speaking platforms, Dr. Swamy brings together his experience in healthcare, medical diagnostics, leadership, and innovation, creating meaningful conversations around the evolving landscape of healthcare and technology.",
       "His presence at TEDx represents another important milestone in his professional journey, alongside his work in clinical care, healthcare leadership, medical technology, and community engagement.",
     ],
   },
@@ -32,8 +32,8 @@ const features: Feature[] = [
     imageHeight: 733,
     category: "Media & Magazines",
     body: [
-      "Dr. Swami Karri's professional journey and contributions to healthcare have received attention through regional news coverage, highlighting his work across medical practice, healthcare leadership, and community engagement.",
-      "With his involvement in diagnostic radiology, advanced medical imaging, hospital leadership, and healthcare initiatives, Dr. Swami continues to build a professional presence that extends beyond his clinical responsibilities.",
+      "Dr. Swamy Karri's professional journey and contributions to healthcare have received attention through regional news coverage, highlighting his work across medical practice, healthcare leadership, and community engagement.",
+      "With his involvement in diagnostic radiology, advanced medical imaging, hospital leadership, and healthcare initiatives, Dr. Swamy continues to build a professional presence that extends beyond his clinical responsibilities.",
       "His work as a medical professional and healthcare leader reflects a commitment to delivering quality healthcare while contributing to the growth and development of the healthcare ecosystem.",
     ],
   },

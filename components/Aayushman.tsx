@@ -17,7 +17,7 @@ const facts = [
     icon: Building2,
     title: "Founder & CEO",
     description:
-      "A high-volume emergency and trauma-care hospital founded and led by Dr. Karri Swami.",
+      "A high-volume emergency and trauma-care hospital founded and led by Dr. Karri Swamy.",
   },
   {
     icon: Activity,
@@ -210,7 +210,7 @@ export default function Aayushman() {
 
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                 A major multi-speciality critical care hospital near the KGH
-                Out Gate in Maharani Peta, Vizag — founded and led by Dr. Swami
+                Out Gate in Maharani Peta, Vizag — founded and led by Dr. Swamy
                 as a high-volume emergency and trauma-care facility integrating
                 advanced diagnostics with major specialities while keeping
                 high-tech care accessible and affordable.

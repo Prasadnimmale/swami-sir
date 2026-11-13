@@ -15,7 +15,7 @@ export default function LogoCircle({ size = 44 }: LogoCircleProps) {
     >
       <Image
         src="/images/ssk-logo.png"
-        alt="Dr. Swami Karri Logo"
+        alt="Dr. Swamy Karri Logo"
         width={size * 2}
         height={size * 2}
         priority
